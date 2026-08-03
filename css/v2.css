@@ -385,8 +385,7 @@
    ABOUT v2
 ──────────────────────────── */
 .v2-about-profile {
-    position: sticky;
-    top: 50px;
+    position: relative;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
