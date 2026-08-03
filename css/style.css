@@ -540,7 +540,9 @@ main {
 }
 
 .banner .container>.row {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 0;
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -612,15 +614,29 @@ main {
 }
 
 .banner .banner-profile {
-    width: 100%;
-    height: 100%;
+    width: 360px;
+    max-width: 85vw;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: 0 auto;
     overflow: hidden;
-    border-radius:100%;
-    
+    border-radius: 50%;
+    border: 5px solid #9e0042;
+    box-shadow: 0 15px 35px rgba(158, 0, 66, 0.25);
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner .banner-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(158, 0, 66, 0.35);
 }
 
 .banner .banner-profile img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
 }
 
 
@@ -748,35 +764,24 @@ main {
 
 .about .about-profile::before,
 .about .about-profile::after {
-    content: '';
-    position: absolute;
-    background: #FFFFFF;
-    z-index: -1; /* Keep it just behind, not too deep */
-    border-radius: 10px; /* Optional rounded effect */
-}
-
-/* Top-left box or strip */
-.about .about-profile::before {
-    top: -10px;
-    left: -10px;
-    width: 30%;
-    height: 120px;
-}
-
-/* Main angled background */
-.about .about-profile::after {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-    background-color: #FFFFFF;
+    display: none;
 }
 
 
+.about .about-profile img,
 .about img {
     position: relative;
-    width: 95%;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    border: 4px solid #ffffff;
+    display: block;
+    margin: 0 auto;
 }
 
 .about .about-logo {
@@ -1273,5 +1278,65 @@ main {
 .btn-cta:hover {
     background-color: #9e0042;
     transform: scale(1.05);
+}
+
+/* Comprehensive Responsive Adjustments */
+@media (max-width: 991px) {
+    .banner .container>.row {
+        min-height: auto;
+        padding: 120px 0 60px 0;
+    }
+    
+    .banner .banner-text h2 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .banner .banner-profile {
+        width: 300px;
+        max-width: 80vw;
+        margin: 0 auto 35px auto;
+    }
+    
+    .about .about-text {
+        padding-left: 0;
+        margin-top: 35px;
+    }
+    
+    .about .about-profile {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner .container>.row {
+        padding: 90px 0 40px 0;
+    }
+
+    .banner .banner-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .banner .banner-text h6.space-caps {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .banner .banner-profile {
+        width: 230px;
+        max-width: 75vw;
+        border-width: 4px;
+        margin-bottom: 25px;
+    }
+
+    .about .about-profile img,
+    .about img {
+        max-width: 280px;
+        border-radius: 16px;
+        border-width: 3px;
+    }
 }
   
