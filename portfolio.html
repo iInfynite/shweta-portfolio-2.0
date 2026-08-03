@@ -3,82 +3,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shweta | Portfolio</title>
+    <title>Portfolio | Shweta Jadhav</title>
 
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
-
-    <!-- portfolio -->
     <link rel="stylesheet" href="css/portfolioPage.css">
-
-    <!-- Default -->
     <link rel="stylesheet" href="css/default.css">
-
-    <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/v2.css">
 </head>
 
 <body>
-
     <div id="main-wrapper">
         <header>
-            <!-- Side Nav Start -->
             <nav class="side-nav">
                 <div class="container">
-                    <!-- Logo Btn Start -->
                     <div class="logo-btn">
-                        <!-- Logo Start -->
-                        <div class="logo">
-                            <a href="index.html"><img src="img/logo/logo2.png" alt="Logo"></a>
-                        </div>
-                        <!-- Logo End -->
-                        <!-- Manu Btn Start -->
-                        <button class="manu-btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <!-- Manu Btn End -->
+                        <div class="logo"><a href="index.html"><img src="img/logo/logo2.png" alt="Logo"></a></div>
+                        <button class="manu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
                     </div>
-                    <!-- Logo Btn End -->
-                    <!-- Main Manu Start -->
                     <div class="main-manu">
                         <div class="overlay"></div>
                         <ul>
-                            <li>
-                                <a href="index.html"><i class="fas fa-home"></i>
-                                    <span>Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="portfolio.html" class="active"><i class="fas fa-briefcase"></i>
-                                    <span>Portfolio</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="about.html"><i class="fas fa-file-invoice"></i>
-                                    <span>About</span>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="services.html"><i class="fas fa-th"></i>
-                                    <span>Services</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.html"><i class="fas fa-phone-alt"></i>
-                                    <span>Contact</span>
-                                </a>
-                            </li>
+                            <li><a href="index.html" title="Home"><i class="fas fa-home"></i><span>Home</span></a></li>
+                            <li><a href="portfolio.html" class="active" title="Portfolio"><i class="fas fa-briefcase"></i><span>Portfolio</span></a></li>
+                            <li><a href="about.html" title="About"><i class="fas fa-file-invoice"></i><span>About</span></a></li>
+                            <li><a href="services.html" title="Services"><i class="fas fa-th"></i><span>Services</span></a></li>
+                            <li><a href="contact.html" title="Contact"><i class="fas fa-phone-alt"></i><span>Contact</span></a></li>
                         </ul>
                     </div>
-                    <!-- Main Manu End -->
-                    <!-- Social Item Start -->
                     <div class="social-item">
                         <span class="social-title">Social</span>
                         <ul>
@@ -88,48 +41,28 @@
                             <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         </ul>
                     </div>
-                    <!-- Social Item End -->
                 </div>
             </nav>
-            <!-- Side Nav End -->
         </header>
+
         <main>
-            <!-- Portfolio Start -->
-            <section class="portfolio">
+            <section class="portfolio v2-portfolio">
                 <div class="container">
-                    <div class="title">
-                        <h2>My Portfolios</h2>
-                    </div>
-                    <!-- Portfolio Demo Btn Start -->
-                   <!-- <div class="portfolio-demo-btn">
-                        <button data-filter=".logo-designs" class="active">Logo Designs</button>
-                        <button data-filter=".expo-invite">Flat Designs</button>
-                        <button data-filter=".standee-designs">Card Designs</button>
-                        <button data-filter=".banner-designs">Flyers Designs</button>
-                   -->
-
-                    </div>
-                    <!-- Portfolio Demo Btn End -->
-                    <!-- Portfolio Demo Start -->
-
-
-                    <div class="container">
-                        <div class="filter-area ">
                     
-                          <div id="myBtnContainer">
-                                <button class="btn-filter active" onclick="filterSelection('logo-designs')">Logo Design</button>
-                                <button class="btn-filter" onclick="filterSelection('expo-invite')">Expo Invite</button>
-                                <button class="btn-filter" onclick="filterSelection('standee-designs')">Stande Design</button>
-                                <button class="btn-filter" onclick="filterSelection('banner-designs')">Banners</button>
-                                <button class="btn-filter" onclick="filterSelection('news-paper')">News Paper</button>
-                            </div>
-                    
-                        </div>
-                    
+                    <div class="v2-page-header">
+                        <span class="v2-section-tag">My Work</span>
+                        <h2>My Portfolio</h2>
+                        <div class="v2-title-line"></div>
+                        <p class="des-text v2-page-desc">A collection of my recent graphic design projects, showcasing brand identities, layouts, and creative concepts.</p>
                     </div>
 
-
-
+                    <div class="v2-portfolio-filters" id="myBtnContainer">
+                        <button class="btn-filter active" onclick="filterSelection('logo-designs')">Logo Design</button>
+                        <button class="btn-filter" onclick="filterSelection('expo-invite')">Expo Invite</button>
+                        <button class="btn-filter" onclick="filterSelection('standee-designs')">Standee Design</button>
+                        <button class="btn-filter" onclick="filterSelection('banner-designs')">Banners</button>
+                        <button class="btn-filter" onclick="filterSelection('news-paper')">News Paper</button>
+                    </div>
 
                     <div class="row portfolio-demo">
                         <!-- Portfolio Logo Design Item Start -->
