@@ -14,6 +14,15 @@
 </head>
 
 <body>
+
+    <!-- Premium Preloader -->
+    <div id="premium-preloader">
+        <div class="premium-loader-brand">Shweta</div>
+        <div class="premium-loader-bar">
+            <div class="premium-loader-fill"></div>
+        </div>
+    </div>
+
     <div id="main-wrapper">
         <header>
             <nav class="side-nav">
@@ -451,7 +460,20 @@
 
     <!-- portfolio js -->
     <script src="js/portfolioPage.js"></script>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.body.classList.add('loaded');
+                setTimeout(function() {
+                    var preloader = document.getElementById('premium-preloader');
+                    if (preloader) { preloader.style.display = 'none'; }
+                }, 600);
+            }, 600);
+        });
+    </script>
 </body>
+
 
 
 <!-- Mirrored from devchange.net/lico/lico_light/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 May 2021 08:55:01 GMT -->

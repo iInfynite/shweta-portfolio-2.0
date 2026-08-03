@@ -24,6 +24,83 @@
 }
 
 /* ────────────────────────────
+   PREMIUM PRELOADER
+──────────────────────────── */
+#premium-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--card-bg);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.premium-loader-brand {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-loader-brand::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--card-bg);
+    animation: revealText 1.2s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+@keyframes revealText {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+.premium-loader-bar {
+    width: 140px;
+    height: 2px;
+    background: rgba(158,0,66,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-loader-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--brand);
+    transform-origin: left;
+    animation: fillBar 1.5s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+}
+
+@keyframes fillBar {
+    0% { transform: scaleX(0); transform-origin: left; }
+    50% { transform: scaleX(1); transform-origin: left; }
+    50.1% { transform: scaleX(1); transform-origin: right; }
+    100% { transform: scaleX(0); transform-origin: right; }
+}
+
+body.loaded #premium-preloader {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ────────────────────────────
    GLOBAL: sections need top padding
    because sidebar is 80px wide
 ──────────────────────────── */

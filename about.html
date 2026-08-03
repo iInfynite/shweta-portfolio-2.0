@@ -25,6 +25,15 @@
 
 <body>
 
+    <!-- Premium Preloader -->
+    <div id="premium-preloader">
+        <div class="premium-loader-brand">Shweta</div>
+        <div class="premium-loader-bar">
+            <div class="premium-loader-fill"></div>
+        </div>
+    </div>
+
+
     <div id="main-wrapper">
         <header>
             <!-- Side Nav Start -->
@@ -203,5 +212,18 @@
         }, 400);
     });
     </script>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.body.classList.add('loaded');
+                setTimeout(function() {
+                    var preloader = document.getElementById('premium-preloader');
+                    if (preloader) { preloader.style.display = 'none'; }
+                }, 600);
+            }, 600);
+        });
+    </script>
 </body>
+
 </html>
