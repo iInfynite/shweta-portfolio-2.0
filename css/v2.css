@@ -384,9 +384,16 @@
 /* ────────────────────────────
    ABOUT v2
 ──────────────────────────── */
-.v2-about-profile {
+.v2-about-sticky-wrapper {
     position: sticky;
     top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.v2-about-profile {
+    position: relative;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
